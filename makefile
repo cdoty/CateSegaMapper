@@ -36,7 +36,8 @@ SystemC_S	+= SystemLib/$(console)/crt0/C/Cart.s
 SystemC_S	+= $(wildcard System/C/*.s)
 
 SharedC_S	= SystemLib/Z80/Decompression/C/aplib-z80.s
-SystemC_S	+= $(wildcard SystemLib/$(console)/C/*.s)
+SharedC_S	+= $(wildcard SystemLib/$(console)/C/*.s)
+SharedC_S	+= $(wildcard SystemLib/$(console)/Bank/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/$(console)/Graphics/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/$(console)/Sound/SN76489/C/*.s)
 SharedC_S	+= $(wildcard SystemLib/$(console)/Sprites/C/*.s)
@@ -48,6 +49,7 @@ SystemZ_S	+= $(wildcard System/Z/*.s)
 
 SharedZ_S	= SystemLib/Z80/Decompression/Z/aplib-z80.s
 SharedZ_S	+= $(wildcard SystemLib/$(console)/Z/*.s)
+SharedZ_S	+= $(wildcard SystemLib/$(console)/Bank/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/$(console)/Graphics/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/$(console)/Sound/SN76489/Z/*.s)
 SharedZ_S	+= $(wildcard SystemLib/$(console)/Sprites/Z/*.s)
