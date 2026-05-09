@@ -27,6 +27,12 @@ callBankFunction_:	public	callBankFunction_
 
 	ret
 
+setDefaultBank:	public setDefaultBank
+	ld		a, 1							; Set current bank
+	ld		(currentBank), a
+
+	ret
+
 getBankParam0B_:	public getBankParam0B_
 	ld		a, (bankParam0)
 
@@ -187,12 +193,6 @@ setBankParam7W_:	public setBankParam7W_
 
 	ret
 	
-setDefaultBank:	public setDefaultBank
-	ld		a, 1							; Set current bank
-	ld		(currentBank), a
-
-	ret
-
 dseg
 
 currentBank:	public currentBank
